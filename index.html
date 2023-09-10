@@ -648,5 +648,20 @@
 	<script>
 	  AOS.init();
 	</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const radioButtons = document.querySelectorAll('input[type="radio"]');
+    const carousel = document.querySelector("#client_slider");
+
+    radioButtons.forEach(function (radio, index) {
+        radio.addEventListener("click", function () {
+            carousel.querySelector(".carousel-item.active").classList.remove("active");
+            carousel.querySelectorAll(".carousel-item")[index].classList.add("active");
+        });
+    });
+});
+</script>
+	
 </body>
 </html>
